@@ -71,7 +71,9 @@ public class UI {
     
     public static void printBoard(ChessPiece[][] pieces) {
         for (int i = 0; i < pieces.length; i++) {
+            System.out.print(ANSI_GREEN);
             System.out.print((8 - i) + " ");
+            System.out.print(ANSI_RESET);
             
             for (int j = 0; j < pieces.length; j++) {
                 printPiece(pieces[i][j], false);
@@ -80,12 +82,16 @@ public class UI {
             System.out.println();
         }
         
+        System.out.print(ANSI_GREEN);
         System.out.println("  a b c d e f g h");
+        System.out.print(ANSI_RESET);
     }
     
     public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
         for (int i = 0; i < pieces.length; i++) {
+            System.out.print(ANSI_GREEN);
             System.out.print((8 - i) + " ");
+            System.out.print(ANSI_RESET);
             
             for (int j = 0; j < pieces.length; j++) {
                 printPiece(pieces[i][j], possibleMoves[i][j]);
@@ -94,7 +100,9 @@ public class UI {
             System.out.println();
         }
         
+        System.out.print(ANSI_GREEN);
         System.out.println("  a b c d e f g h");
+        System.out.print(ANSI_RESET);
     }
     
     private static void printPiece(ChessPiece piece, boolean background) {
